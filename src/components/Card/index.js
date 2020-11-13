@@ -1,13 +1,12 @@
 import React from 'react';
 //import './Card.style.scss';
-import {StyledCardWrapper} from './Card.style';
-import {StyledparaWrapper} from './Card.style';
+import {StyledCardWrapper, StyledText} from "./Card.style"
 /*const cardStyle = {
     color: 'red',
     "background-color" : "green"
 }*/ // inline style ornegi
 
-export const Card = () =>{
+export const Card = ({title}) => {
     return (
         // <div style = {cardStyle}>
         /*<div className  = 'cardWrapper'>
@@ -15,9 +14,7 @@ export const Card = () =>{
             <p style = {{margin : '100px'}}>Ceyhun</p>
         </div>*/
         <StyledCardWrapper>
-            <StyledparaWrapper>ceyhun</StyledparaWrapper>
-            <StyledparaWrapper>zehra</StyledparaWrapper>
-            <StyledparaWrapper>volkan</StyledparaWrapper>
+            <StyledText>{title}</StyledText>
         </StyledCardWrapper>
         
         )
