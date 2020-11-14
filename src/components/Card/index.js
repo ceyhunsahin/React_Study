@@ -6,7 +6,9 @@ import {StyledCardWrapper, StyledText} from "./Card.style"
     "background-color" : "green"
 }*/ // inline style ornegi
 
-export const Card = ({title}) => {
+export const Card = ({title, imgSrc}) => {
+//export const Card = ({movie}) => {
+    // const {title} = movie
     return (
         // <div style = {cardStyle}>
         /*<div className  = 'cardWrapper'>
@@ -14,7 +16,9 @@ export const Card = ({title}) => {
             <p style = {{margin : '100px'}}>Ceyhun</p>
         </div>*/
         <StyledCardWrapper>
+            <img src = {imgSrc} />
             <StyledText>{title}</StyledText>
+           {/* <StyledText>{title}</StyledText> */}
         </StyledCardWrapper>
         
         )
