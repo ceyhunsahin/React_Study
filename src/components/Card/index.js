@@ -1,25 +1,11 @@
-import React from 'react';
-//import './Card.style.scss';
-import {StyledCardWrapper, StyledText} from "./Card.style"
-/*const cardStyle = {
-    color: 'red',
-    "background-color" : "green"
-}*/ // inline style ornegi
+  
+import {StyledCardWrapper, StyledText, StyledMovieImage} from "./Card.style"
 
 export const Card = ({title, imgSrc}) => {
-//export const Card = ({movie}) => {
-    // const {title} = movie
     return (
-        // <div style = {cardStyle}>
-        /*<div className  = 'cardWrapper'>
-            <p style = {{margin : '100px'}}>Ceyhun</p>
-            <p style = {{margin : '100px'}}>Ceyhun</p>
-        </div>*/
         <StyledCardWrapper>
-            <img src = {imgSrc} />
+            <StyledMovieImage src={imgSrc} alt={"Movie Poster"}/>
             <StyledText>{title}</StyledText>
-           {/* <StyledText>{title}</StyledText> */}
         </StyledCardWrapper>
-        
-        )
-} 
+    )
+}
