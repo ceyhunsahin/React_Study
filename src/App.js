@@ -11,6 +11,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 
 function App() {
+  
 
   const [movieList, setMovieList] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("")
@@ -31,7 +32,8 @@ function App() {
   return (
     <div className="App">
       <SearchBox setSearchKeyword={setSearchKeyword}/>
-      <CardList movieList={movieList} baseImageUrl={baseImageUrl} />
+      <CardList movieList={movieList} baseImageUrl={baseImageUrl} />0
+      
     </div>
   );
 }
