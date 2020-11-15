@@ -11,16 +11,19 @@ export const SearchBox = ({setSearchKeyword}) => {
         </StyledSearchBox>
     )
 }*/
-import {useRef} from 'react';
+import {createContext, useRef, useContext} from 'react';
 import {StyledSearchBox, StyledSearchInput, StyledSearchButton} from "./SearchBox.style"
 
-export const SearchBox = ({setSearchKeyword}) => {
+import {MovieContext} from '../../App';
+
+export const SearchBox = () => {
     const inputRef = useRef();
+    const {setSearchKeyword} = useContext(MovieContext);
 
     return (
         <StyledSearchBox>
            <StyledSearchInput ref={inputRef} isColored={false}/>
-           <StyledSearchButton onClick={()=>setSearchKeyword(inputRef?.current?.value)}>Search</StyledSearchButton> 
+           <StyledSearchButton onClick={()=>setSearchKeyword(inputRef?.current?.value)}> Search </StyledSearchButton>
         </StyledSearchBox>
     )
 }
