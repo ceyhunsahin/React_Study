@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <SearchBox setSearchKeyword={setSearchKeyword}/>
-      <CardList movieList={movieList} baseImageUrl={baseImageUrl} />0
+      <CardList movieList={movieList} baseImageUrl={baseImageUrl} />
       
     </div>
   );
