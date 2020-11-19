@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { MovieContext } from "../../Movie";
+import { MovieContext } from "../Movie/Movie";
 import { Pagination } from "@material-ui/lab";
 
 import { StyledPagination } from "./Pagination.style"

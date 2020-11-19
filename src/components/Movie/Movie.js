@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
-import { PaginationBar } from "./components/Pagination";
-import { VideoSection } from './components/VideoSection';
+import { PaginationBar } from "../Pagination/Pagination";
+import { VideoSection } from '../VideoSection/VideoSection';
 import '../../App.css'
 import {SearchBox} from "../SearchBox/SearchBox";
 import {CardList} from "../CardList/CardList";
@@ -17,6 +17,7 @@ function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("Matrix")
   const [countPage, setCountPage] = useState(1);
+  const [page, setPage] = useState(1);
   const handleChange = ( event, a) => {
     setPage(a);
     console.log(event);
@@ -30,7 +31,7 @@ function Movie() {
           }}
       )
       .then((res) =>  {
-        setMovieData(res?.data?.results);
+        setMovieList(res?.data?.results);
         if (res?.data?.total_pages>=5) {
           setCountPage(5);
         } else 
@@ -38,13 +39,13 @@ function Movie() {
       })
       .catch()
       .finally()
-  },[searchKeyword,page])
+  },[searchKeyword, page])
 
   return (
     <div className="App">
       <MovieContext.Provider value={{ movieList, baseImageUrl, setSearchKeyword,countPage, page, handleChange }}>
           <VideoSection />
-          <SearchBar />
+          <SearchBox />
           <PaginationBar/>
           <CardList/>
       </MovieContext.Provider>
