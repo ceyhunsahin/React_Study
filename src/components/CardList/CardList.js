@@ -1,9 +1,7 @@
-
 import {useContext} from 'react';
-import {Card} from "../Card";
-import {MovieContext} from "../../Movie";
+import {Card} from "../Card/Card";
+import {MovieContext} from "../Movie/Movie";
 import {StyledCardList} from "./CardList.style"
-
 export const CardList = () => {
   const {movieList, baseImageUrl} = useContext(MovieContext);
     return (
@@ -14,7 +12,8 @@ export const CardList = () => {
                 key={index} 
                 title={movie.title}
                 id={movie.id}
-                imgSrc={baseImageUrl + movie.poster_path}
+                imgSrc={movie.poster_path ? baseImageUrl + movie.poster_path
+                : "https://upload.wikimedia.org/wikipedia/en/f/f9/No-image-available.jpg"}    
                 />)
             )}
         </StyledCardList>
@@ -22,6 +21,4 @@ export const CardList = () => {
 }
 
 
-{/* // 2 tane moviedata yazmamizin sebebi var mi  varsa map et diyoruz
-            // biz orda  useState([]) de yazabiliriz ya da ternary yapariz
-            //nullish coalesence ? kullanimi movieData?.map gibi */}
+

@@ -1,7 +1,8 @@
-import Movie from "./Movie"
-import MovieDetails from "./MovieDetails"
+import Movie from "./components/Movie/Movie"
+import MovieDetails from "./components/Movie/MovieDetails"
+
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar/Navbar"
 
 const App = () => {
     return (
@@ -9,6 +10,7 @@ const App = () => {
             <Navbar/>
             <Switch>
                 <Route path="/detail/:id" component={MovieDetails} exact/>
+
                 <Route path="/" component={Movie}/>
             </Switch>
         </BrowserRouter>

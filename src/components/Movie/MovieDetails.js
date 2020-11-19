@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { StyledMovieImage} from "./components/Card/Card.style"
+import { StyledMovieImage} from "../Card/Card.style"
 
 const movieDetailBaseUrl = "https://api.themoviedb.org/3/movie/"
-const apiKey = "7fc8d00ab1302c6aa7da237d2810116e"; //temporary
+const apiKey = "1eeee6a7ed1e9cdd4c080ce8edabec58"; //temporary
 const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 export default function MovieDetails() {

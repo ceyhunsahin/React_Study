@@ -12,7 +12,7 @@ export const SearchBox = ({setSearchKeyword}) => {
     )
 }*/
 import {useRef, useContext} from 'react';
-import {MovieContext} from "../../Movie";
+import {MovieContext} from "../Movie/Movie";
 import {StyledSearchBox, StyledSearchInput, StyledSearchButton} from "./SearchBox.style";
 
 export const SearchBox = () => {
